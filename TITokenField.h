@@ -71,7 +71,8 @@
 @property (weak, nonatomic, readonly) NSArray * tokenTitles;
 
 - (void)updateContentSize;
-
+- (void)showSourceInResults;
+- (void)dismissResults;
 @end
 
 //==========================================================

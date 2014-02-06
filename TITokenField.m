@@ -174,6 +174,17 @@
 	[self setContentSize:CGSizeMake(self.bounds.size.width, CGRectGetMaxY(_contentView.frame) + 1)];
 }
 
+- (void)showSourceInResults {
+  [_resultsArray addObjectsFromArray:self.sourceArray];
+  [self reloadResultsTable];
+}
+
+- (void)dismissResults {
+  [_resultsArray removeAllObjects];
+  [self reloadResultsTable];
+  [self.resultsTable setHidden:YES];
+}
+
 - (BOOL)canBecomeFirstResponder {
 	return YES;
 }
